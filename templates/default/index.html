@@ -1,0 +1,37 @@
+{% extends "default/base.html" %}
+{% load static %}
+
+{% block title %}Главная{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="pay-container">
+            <div class="ads green-bg">
+                <p>{{ notif_text }}</p>
+            </div>
+
+            <div class="title">
+                <p>ПРИЁМ ДОНАТА</p>
+            </div>
+
+            <form class="pay-form" action="/pay" method="POST">
+                {% csrf_token %}
+                <input type="text" name="firstname" placeholder="Ваше имя" required>
+                <input type="number" name="cost" min="10" max="15000" placeholder="Введите сумму" required>
+                <button type="submit">Перейти к оплате</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="buttons-container">
+        <div class="links">
+            <a href="/terms_of_use">Пользовательское соглашение</a>
+            <a href="/privacy_policy">Политика конфиденциальности</a>
+        </div>
+
+        <div class="links">
+            <a href="/description_of_goods">Описание товаров</a>
+            <a href="/contacts">Контакты</a>
+        </div>
+    </div>
+{% endblock %}

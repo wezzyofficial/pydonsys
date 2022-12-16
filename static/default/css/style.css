@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  min-width: 300px;
+  min-height: 600px;
+  background: #f2eefb;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+h1, h2, h3, p, a, input {
+  color: white;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  cursor: default;
+}
+
+input, button {
+  border: 0;
+  outline: none;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo-container img {
+  width: 256px;
+  height: auto;
+}
+
+.logo-container .logo-title {
+  color: #b4b4b4;
+
+  font-weight: 700;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  overflow-y: auto;
+
+  min-width: 260px;
+  max-width: 590px;
+}
+
+.pay-container {
+  width: 100%;
+}
+
+.green-bg {
+  background-color: #69CB60;
+}
+
+.ads {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  height: 60px;
+  width: 100%;
+
+  border-radius: 20px 20px 0 0;
+}
+
+.container .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 80px;
+  width: 100%;
+
+  text-align: center;
+  background-color: #faf8ff;
+}
+
+.container .title p {
+  font-weight: 500;
+  font-size: 25px;
+
+  color: #4a1c8d;
+}
+
+.pay-form {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  background-color: #faf8ff;
+  border-radius: 0 0 20px 20px;
+}
+
+.pay-form input {
+  height: 50px;
+  width: 80%;
+
+  color: #000;
+  font-size: 15px;
+  font-weight: 300;
+
+  padding: 0 15px;
+  max-width: 451px;
+
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: #f2eefb;
+}
+
+.pay-form button {
+  height: 60px;
+  width: 89%;
+
+  max-width: 481px;
+  border-radius: 8px;
+
+  margin-bottom: 30px;
+
+  color: white;
+  font-weight: 500;
+  font-size: 17px;
+
+  background: rgba(255, 165, 52, 1.0);
+  background: -webkit-linear-gradient(right, rgba(255, 165, 52, 1.0), rgba(157, 82, 253, 1.0));
+  background: -moz-linear-gradient(right, rgba(255, 165, 52, 1.0), rgba(157, 82, 253, 1.0));
+  background: linear-gradient(to left, rgba(255, 165, 52, 1.0), rgba(157, 82, 253, 1.0));
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #b4b4b4;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #b4b4b4;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #b4b4b4;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #b4b4b4;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #b4b4b4;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color: #b4b4b4;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.buttons-container a {
+  color: #4a1c8d;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 801px) {
+  .buttons-container .links, a:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .buttons-container {
+    flex-direction: column;
+  }
+
+  .buttons-container .links:not(:first-child) {
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .buttons-container .links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .buttons-container a:not(:first-child) {
+    margin-top: 5px;
+  }
+}
+
+@media screen and (min-width: 551px) {
+  .buttons-container a:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.title-info-page {
+  background: #fff;
+  margin-top: 20px;
+
+  padding: 15px;
+  width: 90%;
+
+  max-width: 520px;
+
+  text-align: center;
+  border-radius: 15px;
+}
+
+.title-info-page p {
+  color: #4a1c8d;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+.text-info-page {
+  width: 90%;
+  padding: 15px;
+
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  max-width: 520px;
+
+  background: #fff;
+  overflow-y: auto;
+  border-radius: 15px;
+}
+
+.text-info-page p {
+  color: #000;
+}
+
+.back-info-page {
+  color: #4a1c8d;
+  font-weight: 400;
+
+  margin-bottom: 30px;
+}

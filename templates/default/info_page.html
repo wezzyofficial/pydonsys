@@ -1,0 +1,18 @@
+{% extends "default/base.html" %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="title-info-page">
+            <p>{{ title }}</p>
+        </div>
+
+        <div class="text-info-page">
+            <p>{{ text|linebreaks }}</p>
+        </div>
+
+        <a class="back-info-page" href="/">Вернуться назад</a>
+    </div>
+{% endblock %}
