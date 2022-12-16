@@ -119,7 +119,7 @@ def other_error(request, data, code=500):
     load_settings()
 
     response = render(request, 'default/info_page.html', context=data)
-    response.status_code = 500
+    response.status_code = code
 
     return response
 

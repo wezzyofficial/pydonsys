@@ -28,7 +28,7 @@ urlpatterns = [
     path('description_of_goods/', views.description_of_goods),
     path('contacts/', views.contacts),
 
-    path('admin/', admin.site.urls),
+    path('ybXvz5S3wzR0/', admin.site.urls),
 ]
 
 handler403 = 'website.views.handler403'
