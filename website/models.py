@@ -33,6 +33,7 @@ class Payments(models.Model):
     cost = models.IntegerField(default=15, help_text='Сумма')
 
     create_at = models.DateTimeField(default=datetime.now, help_text='Дата создания')
+    processed = models.BooleanField(default=False, help_text='Обработан ли запрос - ендпоинтом API')
     complete = models.BooleanField(default=False, help_text='Завершено')
 
     class Meta:

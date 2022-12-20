@@ -1,7 +1,10 @@
+import json
+
 from django.shortcuts import render
 from website.qiwi_engine import Qiwi
-from django.http import HttpResponseRedirect
 from website.models import Payments, Settings
+from pydonsys.settings import AUTH_TOKEN_ENDPOINTS
+from django.http import HttpResponseRedirect, HttpResponse
 
 
 def load_settings():
@@ -113,6 +116,39 @@ def contacts(request):
     }
 
     return render(request, "default/info_page.html", context=data)
+
+
+def payments_list(request):
+    if request.method == 'GET':
+        token = request.GET.get('token')
+
+        if token is not None and token == AUTH_TOKEN_ENDPOINTS:
+
+            payments_data = Payments.objects.filter(complete=True, processed=False)
+
+            p_list = [{
+                'fn': p.first_name,
+                'cost': p.cost
+            } for p in payments_data]
+
+            payments_data.update(processed=True)
+
+            data = {
+                'ststus': True,
+                'result': p_list
+            }
+        else:
+            data = {
+                'status': False,
+                'text': 'Авторизация не удалась!'
+            }
+    else:
+        data = {
+            'status': False,
+            'text': 'Метод роута должен быть POST!'
+        }
+
+    return HttpResponse(json.dumps(data))
 
 
 def other_error(request, data, code=500):

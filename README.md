@@ -1,4 +1,4 @@
-![PyDonSys prewiew](https://raw.githubusercontent.com/wezzyofficial/pydonsys/main/assets/screen1.jpg)
+![PyDonSys preview](https://raw.githubusercontent.com/wezzyofficial/pydonsys/main/assets/screen1.jpg)
 
 ## _PyDonSys - система для онлайн приёма донатов на QIWI написанная на Pyhon и работает на Django._
 

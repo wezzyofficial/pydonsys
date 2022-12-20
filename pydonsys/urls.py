@@ -27,6 +27,7 @@ urlpatterns = [
     path('privacy_policy/', views.privacy_policy),
     path('description_of_goods/', views.description_of_goods),
     path('contacts/', views.contacts),
+    path('payments_list/', views.payments_list),
 
     path('ybXvz5S3wzR0/', admin.site.urls),
 ]
