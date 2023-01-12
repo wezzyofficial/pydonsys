@@ -1,6 +1,6 @@
 ![PyDonSys preview](https://raw.githubusercontent.com/wezzyofficial/pydonsys/main/assets/screen1.jpg)
 
-## _PyDonSys - система для онлайн приёма донатов на QIWI написанная на Pyhon и работает на Django._
+## _PyDonSys - система для онлайн приёма донатов на QIWI написанная на Python и работает на Django._
 
 Проект поставляется как есть. И был написан меньше чем за 24 часа! Будет время и желание - буду поддерживать.
 
